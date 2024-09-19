@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+SCRIPT_DIRECTORY=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
+
+docker compose --file ${SCRIPT_DIRECTORY}/compose.yaml up --detach
+docker compose --file ${SCRIPT_DIRECTORY}/compose.yaml exec main bash
+docker compose --file ${SCRIPT_DIRECTORY}/compose.yaml down

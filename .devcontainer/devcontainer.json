@@ -1,0 +1,6 @@
+{
+  "name": "phoenix",
+  "dockerComposeFile": "../docker/compose.yaml",
+  "service": "main",
+  "workspaceFolder": "/home/user/workspace"
+}

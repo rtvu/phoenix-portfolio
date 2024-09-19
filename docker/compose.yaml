@@ -1,0 +1,11 @@
+name: phoenix
+services:
+  main:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    hostname: phoenix
+    stdin_open: true
+    tty: true
+    volumes:
+      - ..:/home/user/workspace
