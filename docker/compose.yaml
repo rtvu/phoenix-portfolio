@@ -5,6 +5,8 @@ services:
       context: ..
       dockerfile: docker/Dockerfile
     hostname: phoenix
+    ports:
+      - 4000:4000
     stdin_open: true
     tty: true
     volumes:

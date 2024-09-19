@@ -28,6 +28,8 @@ RUN \
 # Startup #
 ###########
 
+ENV SHELL=/bin/bash
+
 WORKDIR ${HOME}/workspace
 
 CMD ["/bin/bash"]

@@ -2,5 +2,22 @@
   "name": "phoenix",
   "dockerComposeFile": "../docker/compose.yaml",
   "service": "main",
-  "workspaceFolder": "/home/user/workspace"
+  "workspaceFolder": "/home/user/workspace",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.formatOnSave": true,
+        "elixirLS.suggestSpecs": false,
+        "tailwindCSS.includeLanguages": {
+          "phoenix-heex": "html",
+          "elixir": "html"
+        }
+      },
+      "extensions": [
+        "bradlc.vscode-tailwindcss",
+        "JakeBecker.elixir-ls",
+        "phoenixframework.phoenix"
+      ]
+    }
+  }
 }
