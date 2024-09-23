@@ -24,6 +24,17 @@ RUN \
   sudo rm -rf /var/lib/apt/lists/* && \
   /bin/bash -c '. $HOME/.asdf/asdf.sh && mix archive.install --force hex phx_new'
 
+###################
+# Install Node.js #
+###################
+
+RUN \
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash && \
+  NODE_VERSION=20.15.1 /bin/bash -c 'source ${HOME}/.nvm/nvm.sh && nvm install ${NODE_VERSION}' && \
+  NODE_VERSION=20.15.1 /bin/bash -c 'source ${HOME}/.nvm/nvm.sh && nvm alias default ${NODE_VERSION}' && \
+  /bin/bash -c 'source ${HOME}/.nvm/nvm.sh && nvm use default' && \
+  /bin/bash -c 'source ${HOME}/.nvm/nvm.sh && corepack enable'
+
 ###########
 # Startup #
 ###########
