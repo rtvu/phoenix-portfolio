@@ -52,7 +52,10 @@ defmodule Portfolio.MixProject do
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
       {:bandit, "~> 1.5"},
-      {:tailwind_formatter, "~> 0.4.0", only: [:dev, :test], runtime: false}
+      {:tailwind_formatter, "~> 0.4.0", only: [:dev, :test], runtime: false},
+      {:httpoison, "~> 2.0"},
+      {:poison, "~> 6.0"},
+      {:bypass, "~> 2.1"}
     ]
   end
 
