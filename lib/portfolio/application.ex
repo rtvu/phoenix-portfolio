@@ -8,6 +8,7 @@ defmodule Portfolio.Application do
   @impl true
   def start(_type, _args) do
     children = [
+      Portfolio.Quizzer.OpenTDB,
       PortfolioWeb.Telemetry,
       {DNSCluster, query: Application.get_env(:portfolio, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: Portfolio.PubSub},
